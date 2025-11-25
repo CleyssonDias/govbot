@@ -1,11 +1,11 @@
 import { createCommand } from "#base";
-import { res } from "#functions";
+import { icon, res } from "#functions";
 import { createSection } from "@magicyan/discord";
 import { ApplicationCommandType, ButtonBuilder, ButtonStyle } from "discord.js";
 
 createCommand({
     name: "verificar",
-    description: "🆗 omando para verificar sua conta do roblox no servidor.",
+    description: "✅ Comando para verificar sua conta do ROBLOX na comunidade.",
     type: ApplicationCommandType.ChatInput,
     async run(interaction){
         const discordId = interaction.user.id;
@@ -13,17 +13,18 @@ createCommand({
         const urlbutton = new ButtonBuilder({
             label: "Verificar no roblox", 
             style: ButtonStyle.Link,
-            url:verifyUrl
+            url:verifyUrl,
+            emoji: icon.cheack
         })
 
         await interaction.reply(res.default(
-            "# Verificação de Conta do (\"BM\") Bombeiro Militar",
-            '-# Você será encaminhado para o site oficial da roblox.',
+            `## Verificação de Conta do ("BM") Bombeiro Militar ${icon.bm}`,
+            '-# Você será **encaminhado** para o site **oficial do roblox**.',
             createSection(
                 'Clique nesse botão para conectar sua conta do roblox ao discord:',
                 urlbutton
             ),
-            '-# [GOV] - verificação de conta'
+             `-# ${icon.gov} Governo federal - painel de verificação`
         ));
     }
 });

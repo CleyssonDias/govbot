@@ -6,5 +6,6 @@ export const env = validateEnv(z.object({
     WEBHOOK_LOGS_URL: z.url().optional(),
     GUILD_ID: z.string().optional(),
     MONGO_URI: z.string("MongoDb URI is required").min(1),
+    OPENAITOKEN: z.string("Discord Bot Token is required").min(1),
     DATABASE_NAME: z.string().optional()
 }));

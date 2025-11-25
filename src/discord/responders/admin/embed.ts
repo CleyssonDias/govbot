@@ -12,6 +12,6 @@ createResponder({
         `${data.description}`
         ))
 
-        await interaction.reply(res.success("Embad enviada com sucesso!"));
+        await interaction.reply(res.default("Embad enviada com sucesso!"));
     },
 });
