@@ -1,9 +1,8 @@
 import mongoose, { InferSchemaType, model } from "mongoose";
-import { roleManageSchema } from "./schemas/rolemanage.js";
+import { guildSchema } from "./schemas/guild.js";
 import { memberSchema } from "./schemas/member.js";
 import { env } from "#env";
 import chalk from "chalk";
-import { suporteSchema } from "./schemas/suporte.js";
 
 try {
    console.log(chalk.blue("Connecting to MongoDB..."));
@@ -17,11 +16,9 @@ try {
 }
 
 export const db = {
-   rolemanager: model("roleManager", roleManageSchema, "rolesMaganers"),
-   members: model("member", memberSchema, "members"),
-   suporte: model("suporte", suporteSchema, "suportes")
+   guilds: model("guild", guildSchema, "guilds"),
+   members: model("member", memberSchema, "members")
 };
 
-export type RoleManager = InferSchemaType<typeof roleManageSchema>;
+export type GuildSchema = InferSchemaType<typeof guildSchema>;
 export type MemberSchema = InferSchemaType<typeof memberSchema>;
-export type SuporteSchema = InferSchemaType<typeof suporteSchema>;

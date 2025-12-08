@@ -15,11 +15,9 @@
   "dependencies": {
     "@magicyan/discord": "1.6.3",
     "axios": "^1.13.2",
-    "canvas": "^3.2.0",
     "chalk": "5.6.2",
     "discord.js": "14.24.2",
     "mongoose": "8.3.1",
-    "openai": "^6.9.1",
     "rou3": "0.7.10",
     "zod": "4.1.11"
   },
@@ -54,6 +52,9 @@
     ],
     "#shared/*": [
       "./build/shared/*"
+    ],
+    "#images/*": [
+      "./images*"
     ]
   },
   "baseVersion": "1.4.11"

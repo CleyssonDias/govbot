@@ -1,5 +1,5 @@
 import axios from "axios";
 
-export const instance = axios.create({
-  baseURL: 'https://bm.discloud.app/',
+export const api = axios.create({
+    baseURL: "https://pm.discloud.app/"
 });
